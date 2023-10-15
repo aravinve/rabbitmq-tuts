@@ -75,3 +75,12 @@ Binding key depends on the exchange type!!
 NOTE: Fanout exchanges ignore the routingKey parameter.
 
 `direct` exchange = a message goes to the queues whose binding key exactly matches the routing key of the message.
+
+`topic` exchange = Can't have an arbitrary routingKey - it must be a list of words, delimited by dots.
+e.g. stock.usd.nyse quick.orange.rabbit
+
+Topic works same as direct -> Delivered to all queues matching the routing key
+
+2 special cases for binding keys,
+- * (star) can substitute for exactly one word.
+- # (hash) can substitute for zero or more words.
