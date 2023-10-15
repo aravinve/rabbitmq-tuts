@@ -84,3 +84,11 @@ Topic works same as direct -> Delivered to all queues matching the routing key
 2 special cases for binding keys,
 - * (star) can substitute for exactly one word.
 - # (hash) can substitute for zero or more words.
+
+### RPC
+
+A client and a scalable RPC server.
+
+Run a function on a remote computer wait for result and respond via message back to client.
+
+RMQ can be used in this fashion.
