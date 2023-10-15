@@ -60,4 +60,18 @@ Exchange Types: direct, topic, headers, fanout
 
 fanout - Broadcasts all the messages it receives to all the queues it knows about.
 
-We need to tell the exchange to send messages to our queue. That relationship between exchange and a queue is called a binding. `QueueBind`
+We need to tell the exchange to send messages to our queue. That relationship between exchange and a queue is called a binding. `QueueBind` - the queue is interested in messages from this exchange
+
+### Routing
+
+Bindings can take an extra routingKey parameter.
+
+In Publisher Side -> Call it as binding key
+In Consumer Side -> Call it as routing key
+But both are same
+
+Binding key depends on the exchange type!!
+
+NOTE: Fanout exchanges ignore the routingKey parameter.
+
+`direct` exchange = a message goes to the queues whose binding key exactly matches the routing key of the message.
